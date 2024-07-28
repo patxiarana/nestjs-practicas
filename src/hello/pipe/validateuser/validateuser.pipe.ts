@@ -8,6 +8,7 @@ export class ValidateuserPipe implements PipeTransform {
   if(isNaN(ageNumber)) {
     throw new HttpException('Age must be a number', HttpStatus.BAD_REQUEST)
   }
+
     return {
       ...value,
       age: ageNumber,
